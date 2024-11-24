@@ -1,0 +1,131 @@
+.hero-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2d2244;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 40px; /* Increased padding */
+}
+
+.hero-page-card {
+  background-color: #3e2c5b;
+  border-radius: 16px; /* Slightly increased border radius */
+  padding: 30px; /* Increased padding */
+  width: 1000px; /* Increased width */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly bigger shadow */
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Increased gap */
+  border-bottom: 3px solid #4a3b70; /* Thicker border */
+  padding-bottom: 30px; /* Increased padding */
+  margin-bottom: 30px; /* Increased margin */
+}
+
+.hero-portrait {
+  width: 200px; /* Increased portrait size */
+  border-radius: 16px; /* Larger border radius */
+  object-fit: cover;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap */
+}
+
+.hero-name {
+  font-size: 36px; /* Larger font size */
+  font-weight: bold;
+  margin: 0;
+}
+.hero-talents {
+  display: flex;
+  justify-content: space-evenly; /* Space out the icons evenly */
+  align-items: center;
+  gap: 10px; /* Space between icons */
+  margin: 20px 0;
+}
+
+.talent-icon {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.talent-icon img {
+  width: 40px;  /* Size of the talent icon */
+  height: 40px;
+  object-fit: cover;
+  margin-bottom: 8px; /* Space between icon and text */
+}
+
+.talent-icon p {
+  font-size: 12px;
+  color: #fff; /* Change color as needed */
+  margin: 0;
+}
+
+.hero-title {
+  font-size: 24px; /* Larger font size */
+  color: #e3d1ff;
+  margin: 0;
+}
+
+.hero-element {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Increased gap */
+}
+
+.element-icon {
+  width: 36px; /* Larger icon */
+  height: 36px; /* Larger icon */
+}
+
+.hero-description {
+  font-size: 18px; /* Larger font size */
+  color: #d5c2f0;
+  margin-top: 15px; /* Increased margin */
+}
+
+/* Stats section */
+.hero-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px; /* Larger gap */
+  margin-bottom: 30px; /* Increased margin */
+}
+
+.hero-stats div {
+  font-size: 18px; /* Larger font size */
+  background-color: #4a3b70;
+  padding: 15px; /* Increased padding */
+  border-radius: 12px; /* Larger border radius */
+  text-align: left;
+}
+
+/* Favorite food section */
+.hero-favorite {
+  text-align: center;
+}
+
+.food-info {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increased gap */
+  justify-content: center;
+  margin-top: 15px; /* Increased margin */
+}
+
+.food-icon {
+  width: 60px; /* Larger icon */
+  height: 60px; /* Larger icon */
+  border-radius: 50%;
+}
