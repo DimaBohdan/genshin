@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import HeroRarity from './HeroRarity';
+import HeroRarity from '../HeroRarity';
 const HeroCard = ({ filteredHeroes }) => {
-  const navigate = useNavigate(); // Correctly call useNavigate inside the component
+  const navigate = useNavigate();
   console.dir(filteredHeroes[0])
   return (
     <div className="hero-grid">
@@ -10,7 +10,7 @@ const HeroCard = ({ filteredHeroes }) => {
         <div
           className="hero-card"
           key={hero.name}
-          onClick={() => navigate(`/hero/${hero.name}`)} // Use navigate here
+          onClick={() => navigate(`/hero/${hero.name}`)}
         >
           <img
             src={`https://genshin.jmp.blue/characters/${hero.name}/icon`}

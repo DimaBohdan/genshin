@@ -1,0 +1,96 @@
+.talent-icon-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .custom-tooltip {
+    white-space: pre-line;
+    text-align: left;
+    line-height: 1.5;
+    padding: 8px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow-wrap: break-word; /* Ensures words break correctly */
+    word-wrap: break-word; /* Compatibility with older browsers */
+  }
+  
+  
+  .talent-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .talent-icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
+  }
+  
+  .talent-icon:hover img {
+    transform: scale(1.1); /* Subtle zoom effect on hover */
+  }
+  
+  .talent-popover {
+    position: absolute;
+    top: 110%; /* Below the icon */
+    left: 10%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 12px;
+    opacity: 1;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+    pointer-events: auto;
+  }
+  
+  .talent-popover::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .popover-description {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .show-more-link {
+    color: #1e90ff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .show-more-link:hover {
+    text-decoration: underline;
+  }
+  
