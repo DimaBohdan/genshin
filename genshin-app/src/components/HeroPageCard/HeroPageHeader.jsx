@@ -1,6 +1,6 @@
 import React from 'react';
-
-const HeroPageHeader = ({ hero, heroName, BASE_URL }) => {
+import { BASE_URL } from '../../consts';
+const HeroPageHeader = ({ hero, heroName}) => {
   const elementIconUrl = `${BASE_URL}/elements/${hero.vision.toLowerCase()}/icon`;
 
   return (
@@ -23,11 +23,6 @@ const HeroPageHeader = ({ hero, heroName, BASE_URL }) => {
         </div>
         <p className="hero-description">{hero.description}</p>
       </div>
-      <img
-        src={`${BASE_URL}/characters/${heroName}/gacha-splash`}
-        alt={hero.name}
-        className="hero-image"
-      />
     </div>
   );
 };

@@ -1,6 +1,8 @@
 import React from 'react';
 import HeroRarity from '../HeroRarity';
+import { BASE_URL } from '../../consts';
 
+const NATION_URL = `${BASE_URL}/nations`;
 const HeroStats = ({ hero, getMonthName, TALENT_URL }) => (
   <div className="hero-stats">
     <div>
@@ -18,6 +20,13 @@ const HeroStats = ({ hero, getMonthName, TALENT_URL }) => (
       />
     </div>
     <div>
+      <strong>Nation:</strong> {hero.nation}
+      <img src={`${NATION_URL}/${hero.nation.toLowerCase()}/icon`}
+        width="25px"
+        alt={hero.nation}
+      />
+    </div>
+    <div>
       <strong>Birthday:</strong>{' '}
       {`${getMonthName(hero.birthday.split('-')[1])} ${
         hero.birthday.split('-')[2]
@@ -25,9 +34,6 @@ const HeroStats = ({ hero, getMonthName, TALENT_URL }) => (
     </div>
     <div>
       <strong>Gender:</strong> {hero.gender}
-    </div>
-    <div>
-      <strong>Nation:</strong> {hero.nation}
     </div>
     <div>
       <strong>Release:</strong> {hero.release}

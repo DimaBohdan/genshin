@@ -2,27 +2,25 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import HeroRarity from '../HeroRarity';
 import { BASE_URL } from '../../consts';
-
-const HeroCard = ({ filteredHeroes }) => {
+const WeaponCard = ({ weapons }) => {
   const navigate = useNavigate();
-  console.dir(filteredHeroes[0])
   return (
     <div className="hero-grid">
-      {filteredHeroes.map((hero) => (
+      {weapons.map((weapon) => (
         <div
           className="hero-card"
-          key={hero.name}
-          onClick={() => navigate(`/hero/${hero.name}`)}
+          key={weapon.name}
+          onClick={() => navigate(`/weapon/${weapon.name}`)}
         >
           <img
-            src={`${BASE_URL}/characters/${hero.name}/icon`}
-            alt={hero.name}
+            src={`${BASE_URL}/weapons/${weapon.name}/icon`}
+            alt={weapon.name}
             className="hero-image"
           />
           <div className="hero-info">
-            <h2>{hero.name}</h2>
+            <h2>{weapon.name}</h2>
           </div>
-          <HeroRarity rarity={hero.rarity} />
+          <HeroRarity rarity={weapon.rarity} />
 
         </div>
       ))}
@@ -30,4 +28,4 @@ const HeroCard = ({ filteredHeroes }) => {
   );
 };
 
-export default HeroCard;
+export default WeaponCard;

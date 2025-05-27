@@ -3,26 +3,25 @@ import { useNavigate } from 'react-router-dom';
 import HeroRarity from '../HeroRarity';
 import { BASE_URL } from '../../consts';
 
-const HeroCard = ({ filteredHeroes }) => {
+const FoodCard = ({ foods }) => {
   const navigate = useNavigate();
-  console.dir(filteredHeroes[0])
   return (
     <div className="hero-grid">
-      {filteredHeroes.map((hero) => (
+      {foods.map((food) => (
         <div
           className="hero-card"
-          key={hero.name}
-          onClick={() => navigate(`/hero/${hero.name}`)}
+          key={food.name}
+          onClick={() => navigate(`/food/${food.name}`)}
         >
           <img
-            src={`${BASE_URL}/characters/${hero.name}/icon`}
-            alt={hero.name}
+            src={`${BASE_URL}/consumables/food/${food.name}/`}
+            alt={food.name}
             className="hero-image"
           />
           <div className="hero-info">
-            <h2>{hero.name}</h2>
+            <h2>{food.name}</h2>
           </div>
-          <HeroRarity rarity={hero.rarity} />
+          <HeroRarity rarity={food.rarity} />
 
         </div>
       ))}
@@ -30,4 +29,4 @@ const HeroCard = ({ filteredHeroes }) => {
   );
 };
 
-export default HeroCard;
+export default FoodCard;

@@ -6,11 +6,12 @@ import HeroConstellations from '../components/HeroPageCard/HeroConstellations';
 import HeroStats from '../components/HeroPageCard/HeroStats';
 import HeroTalents from '../components/HeroPageCard/HeroTalents';
 import '../styles/HeroPage.css';
+import Loader from '../components/Loader';
+import { BASE_URL } from '../consts';
 
 const HeroPage = () => {
   const { heroName } = useParams();
   const [hero, setHero] = useState(null);
-  const BASE_URL = 'https://genshin.jmp.blue';
   const TALENT_URL = `${BASE_URL}/characters/${heroName.toLowerCase().replace(' ', '-')}`;
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const HeroPage = () => {
   }, [heroName]);
 
   if (!hero) {
-    return <div>Loading...</div>;
+    return <Loader></Loader>;
   }
 
   const monthTranslations = {

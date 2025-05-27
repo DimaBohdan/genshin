@@ -15,8 +15,8 @@
     color: #fff;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    overflow-wrap: break-word; /* Ensures words break correctly */
-    word-wrap: break-word; /* Compatibility with older browsers */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
   }
   
   
@@ -35,12 +35,12 @@
   }
   
   .talent-icon:hover img {
-    transform: scale(1.1); /* Subtle zoom effect on hover */
+    transform: scale(1.1);
   }
   
   .talent-popover {
     position: absolute;
-    top: 110%; /* Below the icon */
+    top: 110%;
     left: 10%;
     transform: translateX(-50%);
     background-color: #333;

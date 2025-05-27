@@ -1,20 +1,20 @@
 import React from 'react';
+import { BASE_URL } from '../../consts';
 
-const BASE_URL = 'https://genshin.jmp.blue/elements';
+const ELEMENT_URL = `${BASE_URL}/elements`;
 
 const ELEMENTS = [
-  { name: 'Pyro', icon: `${BASE_URL}/pyro/icon` },
-  { name: 'Hydro', icon: `${BASE_URL}/hydro/icon` },
-  { name: 'Anemo', icon: `${BASE_URL}/anemo/icon` },
-  { name: 'Electro', icon: `${BASE_URL}/electro/icon` },
-  { name: 'Geo', icon: `${BASE_URL}/geo/icon` },
-  { name: 'Dendro', icon: `${BASE_URL}/dendro/icon` },
+  { name: 'Pyro', icon: `${ELEMENT_URL}/pyro/icon` },
+  { name: 'Hydro', icon: `${ELEMENT_URL}/hydro/icon` },
+  { name: 'Anemo', icon: `${ELEMENT_URL}/anemo/icon` },
+  { name: 'Electro', icon: `${ELEMENT_URL}/electro/icon` },
+  { name: 'Geo', icon: `${ELEMENT_URL}/geo/icon` },
+  { name: 'Dendro', icon: `${ELEMENT_URL}/dendro/icon` },
 ];
 
 const ElementFilter = ({ onFilter }) => {
   return (
     <div className="element-filter">
-      {/* Map over elements to create buttons dynamically */}
       {ELEMENTS.map((element) => (
         <button key={element.name} className='element-filter' onClick={() => onFilter(element.name)}>
           <img
@@ -25,7 +25,6 @@ const ElementFilter = ({ onFilter }) => {
           {element.name}
         </button>
       ))}
-      {/* Clear Filter Button */}
       <button onClick={() => onFilter('')}>
         Clear Filter
       </button>

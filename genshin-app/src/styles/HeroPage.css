@@ -5,50 +5,49 @@
   background-color: #2d2244;
   color: #ffffff;
   min-height: 100vh;
-  padding: 40px; /* Increased padding */
+  padding: 40px;
 }
 
 .hero-page-card {
   background-color: #3e2c5b;
-  border-radius: 16px; /* Slightly increased border radius */
-  padding: 30px; /* Increased padding */
-  width: 1000px; /* Increased width */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly bigger shadow */
+  border-radius: 16px;
+  padding: 30px;
+  width: 1000px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
   font-family: 'Arial', sans-serif;
 }
 
-/* Header styling */
 .hero-header {
   display: flex;
   align-items: center;
-  gap: 30px; /* Increased gap */
-  border-bottom: 3px solid #4a3b70; /* Thicker border */
-  padding-bottom: 30px; /* Increased padding */
-  margin-bottom: 30px; /* Increased margin */
+  gap: 30px;
+  border-bottom: 3px solid #4a3b70;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .hero-portrait {
-  width: 200px; /* Increased portrait size */
-  border-radius: 16px; /* Larger border radius */
+  width: 200px;
+  border-radius: 16px;
   object-fit: cover;
 }
 
 .hero-info {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Increased gap */
+  gap: 15px;
 }
 
 .hero-name {
-  font-size: 36px; /* Larger font size */
+  font-size: 36px;
   font-weight: bold;
   margin: 0;
 }
 .hero-talents {
   display: flex;
-  justify-content: space-evenly; /* Space out the icons evenly */
+  justify-content: space-evenly;
   align-items: center;
-  gap: 10px; /* Space between icons */
+  gap: 10px;
   margin: 20px 0;
 }
 
@@ -60,20 +59,20 @@
 }
 
 .talent-icon img {
-  width: 40px;  /* Size of the talent icon */
+  width: 40px;
   height: 40px;
   object-fit: cover;
-  margin-bottom: 8px; /* Space between icon and text */
+  margin-bottom: 8px;
 }
 
 .talent-icon p {
   font-size: 12px;
-  color: #fff; /* Change color as needed */
+  color: #fff;
   margin: 0;
 }
 
 .hero-title {
-  font-size: 24px; /* Larger font size */
+  font-size: 24px; 
   color: #e3d1ff;
   margin: 0;
 }
@@ -81,51 +80,31 @@
 .hero-element {
   display: flex;
   align-items: center;
-  gap: 12px; /* Increased gap */
+  gap: 12px; 
 }
 
 .element-icon {
-  width: 36px; /* Larger icon */
-  height: 36px; /* Larger icon */
+  width: 36px;
+  height: 36px;
 }
 
 .hero-description {
-  font-size: 18px; /* Larger font size */
+  font-size: 18px;
   color: #d5c2f0;
-  margin-top: 15px; /* Increased margin */
+  margin-top: 15px;
 }
 
-/* Stats section */
 .hero-stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px; /* Larger gap */
-  margin-bottom: 30px; /* Increased margin */
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
 .hero-stats div {
-  font-size: 18px; /* Larger font size */
+  font-size: 18px;
   background-color: #4a3b70;
-  padding: 15px; /* Increased padding */
-  border-radius: 12px; /* Larger border radius */
+  padding: 15px;
+  border-radius: 12px;
   text-align: left;
-}
-
-/* Favorite food section */
-.hero-favorite {
-  text-align: center;
-}
-
-.food-info {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Increased gap */
-  justify-content: center;
-  margin-top: 15px; /* Increased margin */
-}
-
-.food-icon {
-  width: 60px; /* Larger icon */
-  height: 60px; /* Larger icon */
-  border-radius: 50%;
 }
