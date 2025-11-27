@@ -17,12 +17,13 @@ const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedElement, setSelectedElement] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
-  const [searchParams, setSearchParams] = useSearchParams();
 
+  const [searchParams, setSearchParams] = useSearchParams();
   const heroesPerPage = 24;
+
   const currentPage = parseInt(searchParams.get("page")) || 1;
 
-  // Загрузка героев
+  // -------- Загрузка героев ----------
   useEffect(() => {
     const getHeroes = async () => {
       showLoader();
@@ -47,11 +48,11 @@ const HomePage = () => {
     getHeroes();
   }, [showLoader, hideLoader]);
 
-  // Фильтрация и сортировка при изменении зависимостей
+  // -------- Фильтрация и сортировка ----------
   useEffect(() => {
     let result = [...heroes];
 
-    if (searchQuery) {
+    if (searchQuery.trim()) {
       result = result.filter((hero) =>
         hero.name.toLowerCase().includes(searchQuery)
       );
@@ -68,21 +69,25 @@ const HomePage = () => {
     );
 
     setFilteredHeroes(result);
-    setSearchParams({ page: 1 });
-  }, [heroes, searchQuery, selectedElement, sortOrder, setSearchParams]);
+  }, [heroes, searchQuery, selectedElement, sortOrder]);
 
+  // -------- Действия пользователя ----------
   const handleSearch = (event) => {
     setSearchQuery(event.target.value.toLowerCase());
+    setSearchParams({ page: 1 });
   };
 
   const handleElementFilter = (element) => {
     setSelectedElement(element);
+    setSearchParams({ page: 1 });
   };
 
   const handleSort = () => {
-    setSortOrder((prevOrder) => (prevOrder === "asc" ? "desc" : "asc"));
+    setSortOrder((prev) => (prev === "asc" ? "desc" : "asc"));
+    setSearchParams({ page: 1 });
   };
 
+  // -------- Пагинация ----------
   const indexOfLastHero = currentPage * heroesPerPage;
   const indexOfFirstHero = indexOfLastHero - heroesPerPage;
   const currentHeroes = filteredHeroes.slice(indexOfFirstHero, indexOfLastHero);
@@ -93,10 +98,7 @@ const HomePage = () => {
     setSearchParams({ page: pageNumber });
   };
 
-  // Показывать загрузчик, если герои ещё не подгружены
-  if (heroes.length === 0) {
-    return <Loader />;
-  }
+  if (heroes.length === 0) return <Loader />;
 
   return (
     <div className="homepage">
@@ -105,7 +107,9 @@ const HomePage = () => {
       <SearchBar onSearch={handleSearch} value={searchQuery} />
       <ElementFilter onFilter={handleElementFilter} />
       <SortButton onSort={handleSort} sortOrder={sortOrder} />
+
       <HeroCard filteredHeroes={currentHeroes} onClick={() => {}} />
+
       <Pagination
         currentPage={currentPage}
         totalPages={totalPages}

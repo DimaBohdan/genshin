@@ -11,7 +11,7 @@ import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/genshin">
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
