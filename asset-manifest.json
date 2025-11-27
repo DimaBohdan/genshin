@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/genshin/static/css/main.5a09453c.css",
-    "main.js": "/genshin/static/js/main.97540d5e.js",
+    "main.js": "/genshin/static/js/main.e16d67c1.js",
     "index.html": "/genshin/index.html",
     "main.5a09453c.css.map": "/genshin/static/css/main.5a09453c.css.map",
-    "main.97540d5e.js.map": "/genshin/static/js/main.97540d5e.js.map"
+    "main.e16d67c1.js.map": "/genshin/static/js/main.e16d67c1.js.map"
   },
   "entrypoints": [
     "static/css/main.5a09453c.css",
-    "static/js/main.97540d5e.js"
+    "static/js/main.e16d67c1.js"
   ]
 }
